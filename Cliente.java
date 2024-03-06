@@ -1,43 +1,30 @@
-import javax.swing.JOptionPane;
-
 public class Cliente {
-    public String nombre;
-    public Boolean clientePreferencial = false;
-    public String cedula;
-
-    public Cliente(String nombre, String cedula) {
+    
+    //ATRIBUTOS
+    private String nombre;
+    private String cedula;
+    private String tramite;
+    private boolean preferencial;
+            
+    
+    
+    //CONSTRUCTOR  
+    public Cliente(String nombre, String cedula, String tramite, boolean preferencial){
         this.nombre = nombre;
         this.cedula = cedula;
+        this.tramite = tramite;
+        this.preferencial = preferencial;
     }
-
-    public Cliente() {}
-
-    public void registroDeDatos() {
-        setNombre(JOptionPane.showInputDialog("Digite el nombre:"));
-        setCedula(JOptionPane.showInputDialog("Digite la cédula:"));
-        verificarTipoCliente();
-    }
-
-    public void verificarTipoCliente() {
-        String respuesta = JOptionPane.showInputDialog("Desea analizar un trámite de un cliente preferencial? (Si/No):");
-        this.clientePreferencial = respuesta.equalsIgnoreCase("Si");
-
-    }
-
+    
+    
+    
+    //Getters & Setters
     public String getNombre() {
         return nombre;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public Boolean getClientePreferencial() {
-        return clientePreferencial;
-    }
-
-    public void setClientePreferencial(Boolean clientePreferencial) {
-        this.clientePreferencial = clientePreferencial;
     }
 
     public String getCedula() {
@@ -47,14 +34,24 @@ public class Cliente {
     public void setCedula(String cedula) {
         this.cedula = cedula;
     }
-    
-    
 
-    @Override
-    public String toString() {
-        String textoClientePreferencial = (clientePreferencial ? "Si" : "No");
-        return "Nombre: " + nombre + "\n" +
-               "Cédula: " + cedula + "\n" +
-               "Cliente Preferencial: " + textoClientePreferencial + "\n";
+    public String getTramite() {
+        return tramite;
     }
+
+    public void setTramite(String tipoTramite) {
+        this.tramite = tramite;
+    }
+
+    public boolean isPreferencial() {
+        return preferencial;
+    }
+
+    public void setPreferencial(boolean preferencial) {
+        this.preferencial = preferencial;
+    }
+    
+    
+    
+    
 }
