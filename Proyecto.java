@@ -25,31 +25,12 @@ public class Proyecto {
         
         case 1:
             JOptionPane.showMessageDialog(null, "Elegiste la opción: 1");           
-
-            Cliente cliente = new Cliente(); // Inicializa un nuevo cliente
-            cliente.registroDeDatos(); // Registra datos del cliente
-
-            IngresoTramite ingresoCliente = new IngresoTramite();           
-            ingresoCliente.registroDeDatos();
-            
-            JOptionPane.showMessageDialog(null, cliente.toString() + ingresoCliente.toString());
             break;
         case 2:
             JOptionPane.showMessageDialog(null, "Elegiste la opción: 2");
-            Cliente verificarCliente1 = new Cliente();           
-            verificarCliente1.verificarTipoCliente();
-            
             break;
         case 3:
             JOptionPane.showMessageDialog(null, "Elegiste la opción: 3");
-            Cliente verificarCliente2 = new Cliente();  
-            verificarCliente2.verificarTipoCliente();
-            
-            Documento documento = new Documento();           
-            documento.revisionDocumento();
-            
-            
-            JOptionPane.showMessageDialog(null, documento.toString());
             break;
         case 4:
             JOptionPane.showMessageDialog(null, "Elegiste la opción: 4");
