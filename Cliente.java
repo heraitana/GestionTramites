@@ -1,24 +1,24 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package semana8;
+
+/**
+ *
+ * @author Franco Coward
+ */
 public class Cliente {
-    
-    //ATRIBUTOS
-    private String nombre;
-    private String cedula;
-    private String tramite;
-    private boolean preferencial;
-            
-    
-    
-    //CONSTRUCTOR  
-    public Cliente(String nombre, String cedula, String tramite, boolean preferencial){
+    String nombre ;
+    int cedula;
+    Boolean preferencial;
+
+    public Cliente(String nombre, int cedula, Boolean preferencial) {
         this.nombre = nombre;
         this.cedula = cedula;
-        this.tramite = tramite;
         this.preferencial = preferencial;
     }
-    
-    
-    
-    //Getters & Setters
+
     public String getNombre() {
         return nombre;
     }
@@ -27,31 +27,20 @@ public class Cliente {
         this.nombre = nombre;
     }
 
-    public String getCedula() {
+    public int getCedula() {
         return cedula;
     }
 
-    public void setCedula(String cedula) {
+    public void setCedula(int cedula) {
         this.cedula = cedula;
     }
 
-    public String getTramite() {
-        return tramite;
-    }
-
-    public void setTramite(String tipoTramite) {
-        this.tramite = tramite;
-    }
-
-    public boolean isPreferencial() {
+    public Boolean getPreferencial() {
         return preferencial;
     }
 
-    public void setPreferencial(boolean preferencial) {
+    public void setPreferencial(Boolean preferencial) {
         this.preferencial = preferencial;
     }
-    
-    
-    
     
 }
